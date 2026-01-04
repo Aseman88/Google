@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Engine</title>
+    <style>
+       body {
+            display: flex;
+            flex-direction: column;   
+            justify-content: center;  
+            align-items: center;     
+            height: 100vh;            
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;  
+            background-color: #fff;
+        }
+
+        .logo {
+            font-size: 64px;
+            font-weight: bold;
+            color: #4285f4
+        }
+        .search-box {
+            margin-top: 20px;
+        }
+        input[type="text"] {
+            width: 400px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 24px;
+            font-size: 16px;
+            display: inline-block;
+        }
+        .buttons {
+            margin-top: 20px;
+            align-items: center;
+            justify-content: center;
+            outline: none;
+        }
+        .buttons input {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 4px;
+            background-color: #f2f2f2;
+            cursor: pointer;
+            font-size: 14px;
+            outline: none;
+        }
+        .buttons input:hover{
+            background-color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            margin: 0 5px;
+            outline: none;
+        }
+        footer{
+            position: absolute;
+            bottom: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+        footer a { 
+            margin: 0 10px; 
+            text-decoration: none; 
+            color: #555; 
+        } 
+        footer a:hover { 
+            text-decoration: underline; 
+        } 
+        .upload-btn {
+            display: none; 
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class= "logo">
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" 
+        alt="Search" style="width:272px; height:92px; vertical-align: middle;">
+    </div>
+
+<div class="search-box">
+  <form action="https://www.google.com/search" method="get">
+    <input type="text" name="q" placeholder="Search...">
+
+    <button type="button" id="lens-btn" class="icon-btn">
+      <img src="https://tse3.mm.bing.net/th/id/OIP.2m9t9EPEbf0Lr8HNO4yA1AAAAA?rs=1&pid=ImgDetMain&o=7&rm=3" 
+      style="width:20px; height:20px; vertical-align:middle;">
+    </button>
+
+    <div class="upload-btn" id="upload-section">
+      <input type="file" name="image" accept="image/*">
+      <button type="submit">Search by Image</button>
+    </div>
+
+    <button type="button" class="icon-btn" onclick="alert('Voice search is not supported in this demo.')">
+      <img src="https://tse1.mm.bing.net/th/id/OIP.OsX6cniX-vRdTPYURGXEfgAAAA?rs=1&pid=ImgDetMain&o=7&rm=3"
+       style="width:20px; height:20px; vertical-align:middle;">
+    </button>
+
+    <div class="buttons">
+      <input type="submit" value="Google Search">
+      <input type="button" value="I'm Feeling Lucky" onclick="window.location.href='https://www.google.com/doodles'">
+    </div>
+  </form>
+</div>
+</div>
+
+    <footer>
+        <a href="https://about.google/?utm_source=google-IR&utm_medium=referral&utm_campaign=hp-footer&fg=1" type="button">About</a>
+        <a href="https://policies.google.com/privacy?hl=en-IR&fg=1">Privacy</a>
+        <a href="#">Settings</a>
+        <a href="adve.html">Advanced Search</a>
+    </footer>
+
+    <script>
+  document.getElementById("lens-btn").addEventListener("click", function() {
+    document.getElementById("upload-section").style.display = "block";
+  });
+</script>
+
+</body>
+</html>
